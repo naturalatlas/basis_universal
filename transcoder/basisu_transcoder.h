@@ -173,7 +173,9 @@ namespace basist
 		
 	// Validates that the output buffer is large enough to hold the entire transcoded texture.
 	// For uncompressed texture formats, most input parameters are in pixels, not blocks. Blocks are 4x4 pixels.
-	bool basis_validate_output_buffer_size(transcoder_texture_format target_format,
+	bool basis_validate_output_buffer_size(
+		basis_tex_format source_format,
+		transcoder_texture_format target_format,
 		uint32_t output_blocks_buf_size_in_blocks_or_pixels,
 		uint32_t orig_width, uint32_t orig_height,
 		uint32_t output_row_pitch_in_blocks_or_pixels,
